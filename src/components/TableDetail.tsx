@@ -18,7 +18,7 @@ const columns = [
     key: "Responding",
   },
   {
-    title: "Leq,T",
+    title: "Leq-T",
     dataIndex: "Leq-T",
     key: "Leq-T",
   },
