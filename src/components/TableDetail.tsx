@@ -1,67 +1,36 @@
-import { Pagination, Table } from "antd";
+import {  Table } from "antd";
+import jsonData from '../data/csvjson.json';  // Adjust the relative path based on your project structure
 
-// Table data
-const dataSource = [
-  {
-    key: "1", // Unique key for the row
-    datetime: "12-03-2023 11:23:00",
-    leqT: 32.0,
-    lfmin: 48.1,
-    lfmax: 56.2,
-    lsmin: 32.5,
-    lsmax: 43.1,
-  },
-  {
-    key: "", // Unique key for the empty row
-    datetime: "",
-    leqT: "",
-    lfmin: "",
-    lfmax: "",
-    lsmin: "",
-    lsmax: "",
-  },
-  {
-    key: "", // Unique key for the empty row
-    datetime: "",
-    leqT: "",
-    lfmin: "",
-    lfmax: "",
-    lsmin: "",
-    lsmax: "",
-  },
-];
-
-// Table columns
 const columns = [
   {
     title: "Datetime",
-    dataIndex: "datetime",
-    key: "datetime",
+    dataIndex: "Datetime",
+    key: "Datetime",
   },
   {
     title: "Leq,T",
-    dataIndex: "leqT",
-    key: "leqT",
+    dataIndex: "Leq-T",
+    key: "Leq-T",
   },
   {
     title: "LFmin",
-    dataIndex: "lfmin",
-    key: "lfmin",
+    dataIndex: "LFmin",
+    key: "LFmin",
   },
   {
     title: "LFmax",
-    dataIndex: "lfmax",
-    key: "lfmax",
+    dataIndex: "LFmax",
+    key: "LFmax",
   },
   {
     title: "LSmin",
-    dataIndex: "lsmin",
-    key: "lsmin",
+    dataIndex: "LSmin",
+    key: "LSmin",
   },
   {
     title: "LSmax",
-    dataIndex: "lsmax",
-    key: "lsmax",
+    dataIndex: "LSmax",
+    key: "LSmax",
   },
 ];
 
@@ -69,14 +38,13 @@ const TableDetail = () => {
   return (
     <>
       <Table
-        dataSource={dataSource}
+        dataSource={jsonData}
         columns={columns}
-        pagination={false}
-              bordered
-      
+        // pagination={false}
+        bordered
       />
       <hr className="my-4" />
-      <Pagination />
+      {/* <Pagination /> */}
     </>
   );
 };

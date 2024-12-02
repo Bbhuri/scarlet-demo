@@ -27,11 +27,11 @@ const Navbar = () => {
   const items: MenuProps["items"] = [
     {
       key: "profile",
-      label: "แก้ไขข้อมูลส่วนตัว",
+      label: "Edit profile",
     },
     {
       key: "change-password",
-      label: "เปลี่ยนรหัสผ่าน",
+      label: "Change password",
     },
     {
       key: "logout",
@@ -43,7 +43,7 @@ const Navbar = () => {
             navigate("");
           }}
         >
-          ออกจากระบบ
+          Logout
         </p>
       ),
     },
@@ -58,7 +58,9 @@ const Navbar = () => {
       <div className="flex items-center md:flex">
         <div className="flex items-center gap-2 mr-10 text-black">
           <LuGaugeCircle size={50} />
-          <p className={`duration-150 text-2xl font-medium`}>Scarlet Tech </p>
+          <p className={`duration-150 text-2xl font-medium`}>
+            Scarlet Online Demo
+          </p>
         </div>
         {!token &&
           menuItems.map((item, index) => (
