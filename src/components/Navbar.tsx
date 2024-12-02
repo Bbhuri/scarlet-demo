@@ -62,31 +62,27 @@ const Navbar = () => {
             Scarlet Online Demo
           </p>
         </div>
-        {!token &&
-          menuItems.map((item, index) => (
-            <div
-              key={item.key}
-              onClick={() => {
-                if (item.href) {
-                  navigate(`${item.href}`);
-                }
-              }}
-              className="flex items-center  hover:text-gray-500 self-center cursor-pointer ml-4"
+        {menuItems.map((item, index) => (
+          <div
+            key={item.key}
+            onClick={() => {
+              if (item.href) {
+                navigate(`${item.href}`);
+              }
+            }}
+            className="flex items-center  hover:text-gray-500 self-center cursor-pointer ml-4"
+          >
+            <p
+              className={`h-8 flex items-center duration-300 ${
+                currentPath === item.href
+                  ? "scale-110 border-b-2 border-black"
+                  : ""
+              }`}
             >
-              <p
-                className={`h-8 flex items-center duration-300 ${
-                  currentPath === item.href
-                    ? "scale-110 border-b-2 border-black"
-                    : ""
-                }`}
-              >
-                {typeof item.label === "string" ? item.label : item.label}
-              </p>
-              {index < loginMenu.length - 1 && !token && (
-                <span className="pl-5 text-black">|</span>
-              )}
-            </div>
-          ))}
+              {typeof item.label === "string" ? item.label : item.label}
+            </p>
+          </div>
+        ))}
       </div>
 
       {/* Desktop Menu */}
