@@ -59,7 +59,7 @@ const Navbar = () => {
         <div className="flex items-center gap-2 mr-10 text-black">
           <LuGaugeCircle size={50} />
           <p className={`duration-150 text-2xl font-medium`}>
-            Scarlet Online Demo
+            Scarlet Tech
           </p>
         </div>
         {menuItems.map((item, index) => (
